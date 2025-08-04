@@ -13,19 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-    </script>
-    <script>
-    // Mobile menu toggle (standalone for safety)
-    document.addEventListener('DOMContentLoaded', function() {
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileMenuButton && mobileMenu) {
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-    });
-    </script>
+</script>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -66,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="flex items-center">
                     <a href="home.html" class="font-bold text-2xl text-indigo-600">ConnectIt</a>
                 </div>
-                <div class="hidden md:block">
+               <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="home.html" class="text-gray-600 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Home</a>
                         <a href="event.html" class="text-gray-600 hover:bg-gray-100 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium">Events</a>
@@ -93,8 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </nav>
-
-    <main>
 
  <!-- Create Event Section -->
         <section id="create" class="py-16">
@@ -254,3 +240,15 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </footer>
+    <script>
+    // Mobile menu toggle (runs after DOM is loaded)
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
+    </script>
